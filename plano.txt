@@ -1,0 +1,21 @@
+A árvore AVL do trabalho deve armazenar números inteiros e fornecer métodos de busca, inserção e
+remoção, bem como os encaminhamentos em profundidade em árvores binárias apresentados em aula
+(Pré-Ordem, Pós-Ordem e Em-Ordem).
+
+1º passo:
+    -criar um menu:
+        - insert
+        - delete
+        - select
+        - encaminhamento pré ordem
+        - encaminhamento pós ordem
+        - encaminhamento em ordem
+
+2º passo:
+    - criar uma classe de árvore:
+        com os metodos e insert, select, delete e mostrando os encaminhamentos
+        - dentro de insert: checar antes de por se nao vai ficar desbalanceada
+        - dentro de delete: checar se já não tem dentro da árvore e se não vai ficar desbalanceada
+        - dentro de select: checar se tem
+        - encaminhamentos: achar um jeito de fazer ficar visualmente agradável
+        
