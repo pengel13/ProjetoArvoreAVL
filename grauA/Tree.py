@@ -86,10 +86,10 @@ class Tree:
 
     # Processo de exclusão
     def delete(self, root, key):
-        
+
         if not root:
             return root
-        
+
         # checa se o nó existe e faz a pesquisa pelo nó.
         if key < root.key:
             root.left = self.delete(root.left, key)
@@ -187,34 +187,91 @@ class Tree:
 
 
 if __name__ == "__main__":
-    # Exemplo de uso
-    avl = Tree()
+
+    avlNome = Tree()
     root = None
 
-    # Inserindo nós
-    nums = [10, 20, 30, 40, 50, 25]
+    nums = [
+        "Pedro Engel",
+        "Lucas Engel",
+        "Lucas Schemes",
+        "Tiago Pacheco",
+        "Leo Tavares",
+        "Pedro Balparda",
+    ]
     for num in nums:
-        root = avl.insert(root, num)
+        root = avlNome.insert(root, num)
 
-    # Imprimindo a árvore
-    print("Estrutura da Árvore AVL:")
-    avl.print_tree(root)
+    print("Estrutura da Árvore AVLNome:")
+    avlNome.print_tree(root)
 
-    # Encaminhamento
-    print("\nPré-ordem:", avl.pre_ordem(root))  # Pré-ordem
-    print("Em ordem:", avl.em_ordem(root))  # Em ordem
-    print("Pós-ordem:", avl.pos_ordem(root))  # Pós-ordem
+    avlCPF = Tree()
+    root = None
 
-    # Buscando um elemento
-    search_key = 30
-    found_node = avl.search(root, search_key)
-    if found_node:
-        print(f"\nElemento {search_key} encontrado.")
-    else:
-        print(f"\nElemento {search_key} não encontrado.")
+    nums = [
+        "05426366039",
+        "33426366022",
+        "11603900000",
+        "44263660391",
+        "77456247834",
+        "05424511139",
+    ]
+    for num in nums:
+        root = avlCPF.insert(root, num)
 
-    # Deletando um nó
-    delete_key = 20
-    root = avl.delete(root, delete_key)
-    print(f"\nApós deletar {delete_key}, estrutura da árvore AVL:")
-    avl.print_tree(root)
+    print("Estrutura da Árvore avlCPF:")
+    avlCPF.print_tree(root)
+
+
+    avlNome = Tree()
+    root = None
+
+    nums = [
+        "Pedro Engel",
+        "Lucas Engel",
+        "Lucas Schemes",
+        "Tiago Pacheco",
+        "Leo Tavares",
+        "Pedro Balparda",
+    ]
+    for num in nums:
+        root = avlNome.insert(root, num)
+
+    print("Estrutura da Árvore AVLNome:")
+    avlNome.print_tree(root)
+
+    from datetime import date
+    avlData = Tree()
+    root = None
+
+    nums = [
+        date(2005, 1, 13),
+        date(2004, 1, 13),
+        date(2003, 2, 13),
+        date(2005, 5, 13),
+        date(2005, 1, 15),
+        date(2005, 1, 19),
+    ]
+    for num in nums:
+        root = avlData.insert(root, num)
+
+    print("Estrutura da Árvore avlData:")
+    avlData.print_tree(root)
+    # # Encaminhamento
+    # print("\nPré-ordem:", avl.pre_ordem(root))  # Pré-ordem
+    # print("Em ordem:", avl.em_ordem(root))  # Em ordem
+    # print("Pós-ordem:", avl.pos_ordem(root))  # Pós-ordem
+
+    # # Buscando um elemento
+    # search_key = 30
+    # found_node = avl.search(root, search_key)
+    # if found_node:
+    #     print(f"\nElemento {search_key} encontrado.")
+    # else:
+    #     print(f"\nElemento {search_key} não encontrado.")
+
+    # # Deletando um nó
+    # delete_key = 20
+    # root = avl.delete(root, delete_key)
+    # print(f"\nApós deletar {delete_key}, estrutura da árvore AVL:")
+    # avl.print_tree(root)

@@ -5,7 +5,7 @@ class Pessoa:
 
     def __init__(self, cpf:str, rg:str, nome:str, data:date, cidade:str):
         self.setCPF(cpf)
-        self.RG = rg
+        self.setRG(rg)
         self._nome = nome
         self._data = data
         self._cidade = cidade
@@ -15,6 +15,12 @@ class Pessoa:
             self.CPF = cpf
             return
         raise TypeError("Valor Inválido para CPF")
+    
+    def setRG(self, rg:str):
+        if rg.isnumeric():
+            self.RG = rg
+            return
+        raise TypeError("Valor Inválido para RG")
     
     @property
     def getCPF(self):
